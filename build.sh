@@ -25,10 +25,12 @@ cmake -GNinja -B "$generationDir" \
   -DCMAKE_SYSTEM_NAME="Android" \
   -DCMAKE_BUILD_TYPE="Release" \
   -DCFLAGS="-fPIE -fPIC" \
-  -DLDFLAGS="-llog -lz -lc++_static" \
-  -DANDROID_STL="c++_static" \
+  -DLDFLAGS="-llog -lz -lc++_shared" \
+  -DANDROID_STL="c++_shared" \
   -Dprotobuf_BUILD_TESTS=OFF \
   -Dprotobuf_INSTALL=ON \
+  -Dprotobuf_BUILD_LITE=ON \
+  -Dprotobuf_BUILD_SHARED_LIBS=ON
   
 #cmake --build .
 ninja -C "$generationDir" "-j$(nproc)" || exit 1
