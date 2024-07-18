@@ -38,8 +38,8 @@ ninja -C "$generationDir" "-j$(nproc)" || exit 1
 #cd "${generationDir}"
 #cmake -DCMAKE_INSTALL_PREFIX="$generationDir/protobuff_install" -P cmake_install.cmake
 
-#tree "$generationDir"
+tree "$generationDir"
 
-protoc="$generationDir/protoc"
-$STRIP --strip-all "$protoc" || exit 1
-$CLEAN --api-level "$TARGET_API" "$protoc" || exit 1
+# protoc="$generationDir/protoc"
+# $STRIP --strip-all "$protoc" || exit 1
+# $CLEAN --api-level "$TARGET_API" "$protoc" || exit 1

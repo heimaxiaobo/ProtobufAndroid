@@ -25,7 +25,7 @@ jobs:
 
       - name: Clone protobuf repo
         run: |
-            git clone --recurse-submodules https://github.com/google/protobuf.git -b v21.12
+            git clone --recurse-submodules https://github.com/protocolbuffers/protobuf.git -b v21.12
 
       - name: Prerequisites
         run: |
@@ -64,4 +64,4 @@ jobs:
           name:
             protoc-${{ steps.envvars.outputs.PROTOC_VERSION }}-android-${{
             matrix.target_abi }}
-          path: protobuf/build/protoc
+          path: protobuf/build
