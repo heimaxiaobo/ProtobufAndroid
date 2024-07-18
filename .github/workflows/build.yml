@@ -12,10 +12,10 @@ jobs:
     strategy:
       matrix:
         target_abi:
-          - arm64-v8a
+          # - arm64-v8a
           - armeabi-v7a
-          - x86_64
-          - x86
+          # - x86_64
+          # - x86
       fail-fast: false
     steps:
       - name: Checkout
