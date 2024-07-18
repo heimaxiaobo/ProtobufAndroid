@@ -12,7 +12,7 @@ STRIP="$NDK_TOOLCHAIN/bin/llvm-strip"
 CLEAN=termux-elf-cleaner
 
 TARGET_ABI="$1"
-TARGET_API="27"
+TARGET_API="21"
 PWD="$(pwd)"
 generationDir="$PWD/build"
 mkdir -p "${generationDir}"
