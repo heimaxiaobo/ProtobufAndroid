@@ -25,8 +25,8 @@ cmake -GNinja -B "$generationDir" \
   -DCMAKE_SYSTEM_NAME="Android" \
   -DCMAKE_BUILD_TYPE="Release" \
   -DCFLAGS="-fPIE -fPIC" \
-  -DLDFLAGS="-llog -lz -lc++_shared -Wl --hash-style=sysv" \
-  -DANDROID_STL="c++_shared" \
+  -DLDFLAGS="-llog -lz -lc++_static -Wl --hash-style=sysv" \
+  -DANDROID_STL="c++_static" \
   -Dprotobuf_BUILD_TESTS=OFF \
   -Dprotobuf_INSTALL=ON \
   -Dprotobuf_BUILD_LITE=ON \
